@@ -1,13 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="shortcut icon" href="https://placekitten.com/96/139" type="image/x-icon">
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <script
+      src="https://unpkg.com/htmx.org@1.9.10"
+      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/index.css" />
 </head>
 <body>
-    <script src="https://unpkg.com/html-data-include@3.3.3/html-data-include.js"></script>
+    <!-- header -->
+    <header class="header">
+        <!-- navigation bar -->
+        <section
+            data-hx-trigger="load"
+            data-hx-swap="outerHTML"
+            data-hx-get="global.header-nav.partial.html"
+        ></section>
+        <!-- hero section with headline -->
+        <section
+            data-hx-trigger="load"
+            data-hx-swap="outerHTML"
+            data-hx-get="index.header-hero.partial.html"
+        ></section>
+    </header>
+
+    <main class="main">
+        <!-- "for the committed" section -->
+        <section class="main-content"
+            data-hx-trigger="load"
+            data-hx-swap="outerHTML"
+            data-hx-get="index.main-committed.partial.html"
+        ></section>
+        <!-- section with "guided by experts" & "dynamic open gym"-->
+        <section class="main-content"
+            data-hx-trigger="load"
+            data-hx-swap="outerHTML"
+            data-hx-get="index.main-guided-by.partial.html"
+        ></section>
+        <!-- "join the community" sign -->
+        <section class="main-content"
+            data-hx-trigger="load"
+            data-hx-swap="outerHTML"
+            data-hx-get="index.join-sign.partial.html"
+        ></section>
+        <!-- "discover your potential" -->
+         <section class="main-content"
+            data-hx-trigger="load"
+            data-hx-swap="outerHTML"
+            data-hx-get="index.discover-potential.partial.html"
+        ></section>
+        <!-- "Join the Primal Tribe Today!" with Button -->
+        <section class="main-content"
+            data-hx-trigger="load"
+            data-hx-swap="outerHTML"
+            data-hx-get="index.call-to-action.partial.html"
+        ></section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <section
+            data-hx-trigger="load"
+            data-hx-swap="outerHTML"
+            data-hx-get="global.footer.partial.html"
+        ></section>
+    </footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="js/index.js"></script>
 </body>
 </html>
