@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book a session - PrimalTraining</title>
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <script
+      src="https://unpkg.com/htmx.org@1.9.10"
+      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/reserve.css" />
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+        <!-- navigation bar -->
+        <section
+            data-hx-trigger="load"
+            data-hx-swap="outerHTML"
+            data-hx-get="reserve.header-nav.partial.html"
+        ></section>
+        <!-- hero section with headline -->
+        <section
+            data-hx-trigger="load"
+            data-hx-swap="outerHTML"
+            data-hx-get="reserve.header-hero.partial.html"
+        ></section>
+    </header>
+
+    <main class="main">
+        <!-- classes:  "strength", "conditioning", "community classes"-->
+        <section
+            data-hx-trigger="load"
+            data-hx-swap="outerHTML"
+            data-hx-get="reserve.class-types.partial.html"
+        ></section>
+        <!-- "Primal Personal Training" & Button -->
+        <section
+            data-hx-trigger="load"
+            data-hx-swap="outerHTML"
+            data-hx-get="reserve.call-to-action.partial.html"
+        ></section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <section
+            data-hx-trigger="load"
+            data-hx-swap="outerHTML"
+            data-hx-get="reserve.footer.partial.html"
+        ></section>
+    </footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="js/reserve.js"></script>
+</body>
+</html>
