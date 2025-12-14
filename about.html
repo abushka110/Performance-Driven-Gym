@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrimalTraining - About us</title>
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <script
+      src="https://unpkg.com/htmx.org@1.9.10"
+      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/about.css" />
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+        <!-- navigation bar -->
+        <section
+            data-hx-trigger="load"
+            data-hx-swap="outerHTML"
+            data-hx-get="global.header-nav.partial.html"
+        ></section>
+        <!-- hero section with headline -->
+        <section
+            data-hx-trigger="load"
+            data-hx-swap="outerHTML"
+            data-hx-get="about.header-hero.partial.html"
+        ></section>
+    </header>
+
+    <main class="main">
+        <!-- section with "Tap into Your Primal Power. Forge a Stronger You." text -->
+        <section class="main-content"
+            data-hx-trigger="load"
+            data-hx-swap="outerHTML"
+            data-hx-get="about.main-primal-power.partial.html"
+        ></section>
+        <!-- "dynamic open gym" -->
+        <section class="main-content"
+            data-hx-trigger="load"
+            data-hx-swap="outerHTML"
+            data-hx-get="about.dynamic-gym.partial.html"
+        ></section>
+        <!-- section with "We've created a space where you can reconnect with your primal self." text -->
+        <section class="main-content"
+            data-hx-trigger="load"
+            data-hx-swap="outerHTML"
+            data-hx-get="about.reconnect.partial.html"
+        ></section>
+        <!-- "Join the Primal Tribe Today!" & "join" button -->
+        <section class="main-content"
+            data-hx-trigger="load"
+            data-hx-swap="outerHTML"
+            data-hx-get="about.join-today.partial.html"
+        ></section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <section
+            data-hx-trigger="load"
+            data-hx-swap="outerHTML"
+            data-hx-get="about.footer.partial.html"
+        ></section>
+    </footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="js/about.js"></script>
+</body>
+</html>
