@@ -1,0 +1,310 @@
+/* ============================================
+   CSS Variables & Root Styles
+   ============================================ */
+:root {
+    /* Colors */
+    --color-primary: #000000;
+    --color-text: #ffffff;
+    --color-text-secondary: #b0b0b0;
+    --color-accent: #ff6b00;
+    --color-background: #0a0a0a;
+    --color-background-secondary: #1a1a1a;
+    --color-border: #2a2a2a;
+    
+    /* Typography */
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+    
+    /* Font Sizes */
+    --font-size-xs: 0.75rem;      /* 12px */
+    --font-size-sm: 0.875rem;     /* 14px */
+    --font-size-base: 1rem;       /* 16px */
+    --font-size-lg: 1.125rem;     /* 18px */
+    --font-size-xl: 1.25rem;      /* 20px */
+    --font-size-2xl: 1.5rem;      /* 24px */
+    --font-size-3xl: 1.875rem;    /* 30px */
+    --font-size-4xl: 2.25rem;     /* 36px */
+    --font-size-5xl: 3rem;        /* 48px */
+    --font-size-6xl: 3.75rem;     /* 60px */
+    --font-size-7xl: 4.5rem;      /* 72px */
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;         /* 8px */
+    --spacing-sm: 1rem;           /* 16px */
+    --spacing-md: 1.5rem;         /* 24px */
+    --spacing-lg: 2rem;           /* 32px */
+    --spacing-xl: 3rem;           /* 48px */
+    --spacing-2xl: 4rem;          /* 64px */
+    --spacing-3xl: 6rem;          /* 96px */
+    --spacing-4xl: 8rem;          /* 128px */
+    
+    /* Layout */
+    --container-max-width: 1200px;
+    --container-padding: 2rem;
+    --container-padding-mobile: 1rem;
+    
+    /* Transitions */
+    --transition-speed: 0.3s;
+    --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   CSS Reset & Base Styles
+   ============================================ */
+*, 
+*::before, 
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    overflow-x: hidden;
+}
+
+/* ============================================
+   Typography
+   ============================================ */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--font-weight-bold);
+    line-height: 1.2;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text);
+}
+
+h1 {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: var(--font-weight-black);
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: var(--font-weight-black);
+    letter-spacing: -0.01em;
+}
+
+h3 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+h4 {
+    font-size: var(--font-size-xl);
+}
+
+h5 {
+    font-size: var(--font-size-lg);
+}
+
+h6 {
+    font-size: var(--font-size-base);
+}
+
+p {
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition-speed) var(--transition-smooth);
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+/* ============================================
+   Images & Media
+   ============================================ */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+img, 
+video {
+    border: none;
+    outline: none;
+}
+
+/* ============================================
+   Lists
+   ============================================ */
+ul, ol {
+    list-style: none;
+}
+
+/* ============================================
+   Buttons
+   ============================================ */
+button {
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    transition: all var(--transition-speed) var(--transition-smooth);
+}
+
+.btn {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-speed) var(--transition-smooth);
+    cursor: pointer;
+}
+
+.btn--primary {
+    background-color: var(--color-text);
+    color: var(--color-primary);
+}
+
+.btn--primary:hover {
+    background-color: var(--color-accent);
+    color: var(--color-text);
+    transform: translateY(-2px);
+}
+
+.btn--secondary {
+    background-color: transparent;
+    color: var(--color-text);
+    border: 2px solid var(--color-text);
+}
+
+.btn--secondary:hover {
+    background-color: var(--color-text);
+    color: var(--color-primary);
+}
+
+/* ============================================
+   Layout Utilities
+   ============================================ */
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.section {
+    padding: var(--spacing-3xl) 0;
+}
+
+/* ============================================
+   Text Utilities
+   ============================================ */
+.text-center {
+    text-align: center;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-bold {
+    font-weight: var(--font-weight-bold);
+}
+
+.text-accent {
+    color: var(--color-accent);
+}
+
+/* ============================================
+   Spacing Utilities
+   ============================================ */
+.mt-sm { margin-top: var(--spacing-sm); }
+.mt-md { margin-top: var(--spacing-md); }
+.mt-lg { margin-top: var(--spacing-lg); }
+.mt-xl { margin-top: var(--spacing-xl); }
+
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+.mb-xl { margin-bottom: var(--spacing-xl); }
+
+/* ============================================
+   Accessibility
+   ============================================ */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+/* ============================================
+   Responsive Breakpoints
+   ============================================ */
+@media (max-width: 768px) {
+    :root {
+        --container-padding: var(--container-padding-mobile);
+    }
+    
+    .section {
+        padding: var(--spacing-2xl) 0;
+    }
+}
+
+/* ============================================
+   Preload & Loading States
+   ============================================ */
+[data-hx-trigger="load"] {
+    min-height: 50px;
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+}
