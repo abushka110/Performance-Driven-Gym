@@ -3,26 +3,31 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PrimalTraining</title>
-    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <title>Train Hard. Live Better | PrimalTraining</title>
+    <meta name="description" content="Performance-driven gym with expert coaching, results-driven programs, and a supportive community. Join Primal Training today!" />
+    <link rel="shortcut icon" href="img/logo/primal-training-logo.svg" type="image/svg+xml" />
+    
     <!-- htmx -->
     <script
-      src="https://unpkg.com/htmx.org@1.9.10"
-      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
-      crossorigin="anonymous"
+        src="https://unpkg.com/htmx.org@1.9.10"
+        integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+        crossorigin="anonymous"
     ></script>
+    
+    <!-- CSS Files -->
     <link rel="stylesheet" href="css/index.css" />
 </head>
 <body>
-    <!-- header -->
+    <!-- Header -->
     <header class="header">
-        <!-- navigation bar -->
+        <!-- Navigation Bar -->
         <section
             data-hx-trigger="load"
             data-hx-swap="outerHTML"
             data-hx-get="global.header-nav.partial.html"
         ></section>
-        <!-- hero section with headline -->
+        
+        <!-- Hero Section with Headline -->
         <section
             data-hx-trigger="load"
             data-hx-swap="outerHTML"
@@ -30,40 +35,50 @@
         ></section>
     </header>
 
+    <!-- Main Content -->
     <main class="main">
-        <!-- "for the committed" section -->
-        <section class="main-content"
+        <!-- "For the Committed" Section -->
+        <section 
+            class="main-content"
             data-hx-trigger="load"
             data-hx-swap="outerHTML"
             data-hx-get="index.main-committed.partial.html"
         ></section>
-        <!-- section with "guided by experts" & "dynamic open gym"-->
-        <section class="main-content"
+
+        <!-- Section with "Guided by Experts" & "Dynamic Open Gym" -->
+        <section 
+            class="main-content"
             data-hx-trigger="load"
             data-hx-swap="outerHTML"
             data-hx-get="index.main-guided-by.partial.html"
         ></section>
-        <!-- "join the community" sign -->
-        <section class="main-content"
+
+        <!-- "Join the Community" Sign -->
+        <section 
+            class="main-content"
             data-hx-trigger="load"
             data-hx-swap="outerHTML"
             data-hx-get="index.join-sign.partial.html"
         ></section>
-        <!-- "discover your potential" -->
-         <section class="main-content"
+
+        <!-- "Discover Your Potential" -->
+        <section 
+            class="main-content"
             data-hx-trigger="load"
             data-hx-swap="outerHTML"
             data-hx-get="index.discover-potential.partial.html"
         ></section>
+
         <!-- "Join the Primal Tribe Today!" with Button -->
-        <section class="main-content"
+        <section 
+            class="main-content"
             data-hx-trigger="load"
             data-hx-swap="outerHTML"
             data-hx-get="index.call-to-action.partial.html"
         ></section>
     </main>
 
-    <!-- footer -->
+    <!-- Footer -->
     <footer class="footer">
         <section
             data-hx-trigger="load"
