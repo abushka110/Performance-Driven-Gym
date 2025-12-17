@@ -1,0 +1,20 @@
+/* Base styles (shared) */
+.cta { 
+    padding: 4rem 0;
+    text-align: center;
+}
+
+/* Index page background */
+.cta--index {
+    background: linear-gradient(135deg, #7B68EE 0%, #9B7EFF 100%);
+}
+
+/* About page background */
+.cta--about {
+    background: linear-gradient(135deg, #6B5AFF 0%, #8B7EFF 100%);
+}
+
+/* Reserve page background */
+.cta--reserve {
+    background: linear-gradient(135deg, #5B4AEE 0%, #7B6EFF 100%);
+}
