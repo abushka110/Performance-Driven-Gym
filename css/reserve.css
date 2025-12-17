@@ -1,0 +1,20 @@
+/* ============================================
+   reserve.css - Reserve/Book Session Page Styles
+   This file imports all CSS needed for the reserve page
+   ============================================ */
+
+/* Global Styles (used across all pages) */
+@import url('global/global.css');
+
+/* Header & Navigation (global.header-nav.partial.html) */
+@import url('global/header-nav.css');
+
+/* Footer (global.footer.partial.html) */
+@import url('global/footer.css');
+
+/* Hero Section (reserve.header-hero.partial.html) */
+@import url('reserve/header-hero.css');
+
+/* Reserve Page Sections */
+@import url('reserve/class-types.css');            /* reserve.class-types.partial.html */
+@import url('reserve/call-to-action.css');         /* reserve.call-to-action.html */

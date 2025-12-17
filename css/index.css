@@ -1,0 +1,26 @@
+/* ============================================
+   index.css - Home Page Styles
+   This file imports all CSS needed for the home page
+   ============================================ */
+
+/* Global Styles (used across all pages) */
+@import url('global/global.css');
+
+/* Header & Navigation (global.header-nav.partial.html) */
+@import url('global/header-nav.css');
+
+/* Footer (global.footer.partial.html) */
+@import url('global/footer.css');
+
+/* Hero Section (index.header-hero.partial.html) */
+@import url('index/header-hero.css');
+
+/* Main Content Sections */
+@import url('index/main-committed.css');           /* index.main-committed.partial.html */
+@import url('index/main-guided-by.css');           /* index.main-guided-by.partial.html */
+@import url('index/join-sign.css');                /* index.join-sign.partial.html */
+@import url('index/discover-potential.css');       /* index.discover-potential.partial.html */
+@import url('index/call-to-action.css');           /* index.call-to-action.partial.html */
+
+/* Footer (global.footer.partial.html) */
+@import url('footer.css');

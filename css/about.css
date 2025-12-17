@@ -1,0 +1,22 @@
+/* ============================================
+   about.css - About Page Styles
+   This file imports all CSS needed for the about page
+   ============================================ */
+
+/* Global Styles (used across all pages) */
+@import url('global/global.css');
+
+/* Header & Navigation (global.header-nav.partial.html) */
+@import url('global/header-nav.css');
+
+/* Footer (global.footer.partial.html) */
+@import url('global/footer.css');
+
+/* Hero Section (about.header-hero.partial.html) */
+@import url('about/header-hero.css');
+
+/* About Page Sections */
+@import url('about/vision.css');                   /* about.vision.partial.html */
+@import url('about/dynamic-gym.css');              /* about.dynamic-gym.partial.html */
+@import url('about/reconnect.css');                /* about.reconnect.partial.html */
+@import url('about/call-to-action.css');           /* about.call-to-action.partial.html */
