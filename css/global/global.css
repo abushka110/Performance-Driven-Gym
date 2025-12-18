@@ -1,13 +1,22 @@
 /* Base */
 :root {
+  /* Colors */
   --color-01: #808CFD;
   --color-02: #E9ECFF;
   --color-03: #FFFFFF;
   --color-04: #000000;
 
+  /* Fonts */
   --font-01: "Anek Tamil", sans-serif;
   --font-02: "Geist", sans-serif;
   --font-03: "Geist Mono", monospace;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Headings */
@@ -71,11 +80,66 @@ p {
     color: var(--text-black);
 }
 
-/* Button text */
+/* Text Utilities */
+.xsm {
+    font-family: var(--font-02);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Button/Link text */
 .button {
     font-family: var(--font-03);
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+/* Primary Button - Purple/Blue */
+.button.primary {
+    background-color: var(--color-01);
+    color: var(--color-04);
+}
+
+.button.primary:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    background-color: var(--color-04);
+    color: var(--color-03);
+}
+
+/* Secondary Button - Black outline */
+.button.secondary {
+    background-color: var(--color-02);
+    color: var(--color-04);
+    border: 2px solid var(--color-04);
+}
+
+.button.secondary:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    background-color: var(--color-04);
+    color: var(--color-03);
+}
+
+/* Link Button - Text only */
+.button.link {
+    background-color: transparent;
+    color: var(--color-04);
+    padding: 0;
+    text-decoration: underline;
+}
+
+.button.link:hover {
+    opacity: 0.7;
 }
