@@ -1,0 +1,293 @@
+/* ============================================
+   Header Navigation Styles
+   ============================================ */
+
+.header-nav {
+    width: 100%;
+    background-color: var(--color-03);
+    border-bottom: 1px solid var(--color-02);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Container */
+.header-nav__container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 1rem var(--container-padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Logo */
+.header-nav__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.header-nav__logo-img {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+.header-nav__logo-text {
+    font-family: var(--font-01);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-04);
+    letter-spacing: -0.5px;
+}
+
+/* Desktop Menu */
+.header-nav__menu {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.header-nav__item {
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav__link {
+    font-family: var(--font-02);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-04);
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color var(--transition-speed) var(--transition-smooth);
+    position: relative;
+}
+
+.header-nav__link:hover {
+    border-bottom-color: var(--color-01);
+}
+
+.header-nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-01);
+    transition: width var(--transition-speed) var(--transition-smooth);
+}
+
+.header-nav__link:hover::after {
+    width: 100%;
+}
+
+/* CTA Button */
+.header-nav__cta {
+    font-family: var(--font-02);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-03);
+    background-color: var(--color-01);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid var(--color-01);
+    transition: all var(--transition-speed) var(--transition-smooth);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.header-nav__cta:hover {
+    background-color: var(--color-04);
+    border-color: var(--color-04);
+}
+
+/* Mobile Toggle Button */
+.header-nav__toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    width: 28px;
+    height: 24px;
+    gap: 0.375rem;
+    flex-shrink: 0;
+}
+
+.header-nav__toggle-bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-04);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-speed) var(--transition-smooth);
+    transform-origin: center;
+}
+
+.header-nav__toggle.active .header-nav__toggle-bar:nth-child(1) {
+    transform: translateY(10.5px) rotate(45deg);
+}
+
+.header-nav__toggle.active .header-nav__toggle-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.header-nav__toggle.active .header-nav__toggle-bar:nth-child(3) {
+    transform: translateY(-10.5px) rotate(-45deg);
+}
+
+/* Mobile Menu */
+.header-nav__mobile {
+    display: none;
+    background-color: var(--color-03);
+    border-top: 1px solid var(--color-02);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-speed) var(--transition-smooth);
+}
+
+.header-nav__mobile.active {
+    display: block;
+    max-height: 400px;
+}
+
+.header-nav__mobile-menu {
+    list-style: none;
+    margin: 0;
+    padding: 1rem var(--container-padding);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.header-nav__mobile-item {
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav__mobile-link {
+    font-family: var(--font-02);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-04);
+    text-decoration: none;
+    display: block;
+    padding: 0.75rem 0;
+    transition: color var(--transition-speed) var(--transition-smooth);
+}
+
+.header-nav__mobile-link:active {
+    color: var(--color-01);
+}
+
+/* Mobile CTA Button */
+.header-nav__mobile-cta {
+    font-family: var(--font-02);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-03);
+    background-color: var(--color-01);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    display: block;
+    border: 2px solid var(--color-01);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all var(--transition-speed) var(--transition-smooth);
+}
+
+.header-nav__mobile-cta:active {
+    background-color: var(--color-04);
+    border-color: var(--color-04);
+}
+
+/* ============================================
+   Mobile Responsive (768px and below)
+   ============================================ */
+@media (max-width: 768px) {
+    .header-nav__container {
+        padding: 1rem var(--container-padding-mobile);
+        gap: 1rem;
+    }
+
+    .header-nav__menu {
+        display: none;
+    }
+
+    .header-nav__toggle {
+        display: flex;
+    }
+
+    .header-nav__mobile {
+        display: none;
+    }
+
+    .header-nav__mobile.active {
+        display: block;
+        animation: slideDown var(--transition-speed) var(--transition-smooth);
+    }
+}
+
+/* Slide Down Animation for Mobile Menu */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   Extra Small Screens (320px and below)
+   ============================================ */
+@media (max-width: 480px) {
+    .header-nav__container {
+        padding: 0.75rem var(--container-padding-mobile);
+    }
+
+    .header-nav__logo-img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .header-nav__logo-text {
+        font-size: 18px;
+    }
+
+    .header-nav__mobile-menu {
+        padding: 0.75rem var(--container-padding-mobile);
+        gap: 0.75rem;
+    }
+
+    .header-nav__toggle {
+        width: 24px;
+        height: 20px;
+        gap: 0.25rem;
+    }
+
+    .header-nav__toggle-bar {
+        height: 2.5px;
+    }
+}
