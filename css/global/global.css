@@ -1,31 +1,31 @@
 /* Base */
 :root {
-  /* Colors */
-  --color-01: #808CFD;
-  --color-02: #E9ECFF;
-  --color-03: #FFFFFF;
-  --color-04: #000000;
+    /* Colors */
+    --color-01: #808CFD;
+    --color-02: #E9ECFF;
+    --color-03: #FFFFFF;
+    --color-04: #000000;
 
-  /* Fonts */
-  --font-01: "Anek Tamil", sans-serif;
-  --font-02: "Geist", sans-serif;
-  --font-03: "Geist Mono", monospace;
+    /* Fonts */
+    --font-01: "Anek Tamil", sans-serif;
+    --font-02: "Geist", sans-serif;
+    --font-03: "Geist Mono", monospace;
 
-  /* Layout */
+    /* Layout */
     --container-max-width: 1200px;
     --container-padding: 2rem;
     --container-padding-mobile: 1rem;
-    
+
     /* Transitions */
     --transition-speed: 0.3s;
     --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
-    
+
     /* Border Radius */
     --radius-sm: 4px;
     --radius-md: 8px;
     --radius-lg: 12px;
     --radius-xl: 16px;
-    
+
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
